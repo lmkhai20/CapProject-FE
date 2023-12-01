@@ -1,0 +1,109 @@
+.upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 50px;
+    // background-color: #d5d9e1;
+
+    .upload-form{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 20px;
+      border: 1px solid #000;
+      border-radius: 10px;
+      background-color: rgb(232, 235, 240);
+
+      .file-input {
+        margin-bottom: 10px;
+
+      }
+      input[type='file'] {
+        color: transparent;
+      }
+    
+      .upload-button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+
+    }
+
+  
+    .image-and-result-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 20px;
+  
+      .response-image {
+        flex: 0 0 48%; /* Adjust the width as needed */
+        max-width: 100%;
+        border-radius: 4px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      }
+  
+      .result-container {
+        flex: 0 0 48%; /* Adjust the width as needed */
+        margin-top: 0;
+        padding-left: 10px; /* Add spacing between image and result */
+        box-sizing: border-box;
+  
+        .result-item {
+          margin-bottom: 10px;
+  
+          strong {
+            font-weight: bold;
+          }
+  
+          p {
+            margin: 0;
+          }
+        }
+        .result-table {
+          width: 100%;
+          border-collapse: collapse;
+          margin-top: 20px;
+  
+          th,
+          td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: left;
+          }
+  
+          th {
+            background-color: #141212;
+          }
+  
+          .result-item {
+            display: flex;
+            align-items: center;
+  
+            strong {
+              margin-right: 10px;
+              min-width: 80px; /* Adjust as needed */
+              display: inline-block;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .error-message {
+    color: red;
+    margin-top: 10px;
+  }

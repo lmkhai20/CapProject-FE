@@ -1,0 +1,522 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+   }
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // background-color: #d5d9e1;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.home-main {
+    width: 80%;
+    display: flex;
+    margin-top: 50px;
+   
+    .home-main-right {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+
+        .main-img {
+            width: 500px;
+            height: 300px;
+        }
+
+        .text-show {
+            margin-top: 30px;
+            width: 100%;
+
+            #name-denoise {
+                font-weight: 800;
+                font-size: 60px;
+                color: rgb(63, 62, 62);
+            }
+
+            #name-100 {
+                color: rgb(63, 62, 62);
+                font-size: 30px;
+
+            }
+
+            #name-100 span {
+                padding: 4px 10px 5px 10px;
+                border-top-right-radius: 20px;
+                border-bottom-left-radius: 20px;
+                background-color: orange;
+                color: #FFF;
+            }
+        }
+    }
+
+    .home-main-left {
+        flex: 1;
+        display: flex;
+
+        flex-direction: column;
+        align-items: center;
+
+        .upload {
+            margin-top: 90px;
+            box-shadow: 0px 5px 10px 10px #dfd9d9;
+            width: 90%;
+            height: 320px;
+            border-radius: 30px;
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn-upload {
+            padding: 11px 40px 15px 40px;
+            background-color: rgb(78, 78, 172);
+            font-size: 30px;
+            font-weight: bold;
+            color: #FFF;
+            border-radius: 40px;
+            text-decoration: none;
+        }
+
+        .home-left-bot {
+            width: 90%;
+            margin-top: 30px;
+            display: flex;
+        }
+
+        .left-bot-p {}
+
+        .left-bot-p p {
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        .left-bot-p+.left-bot-img {
+            margin-left: 20px;
+        }
+
+        .left-bot-img {
+            width: 62px;
+            height: 62px;
+            margin-left: 13px;
+            border-radius: 10px;
+        }
+
+
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .home-main {
+        width: 75%;
+        display: flex;
+        margin-top: 33px;
+
+        .home-main-right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .main-img {
+                width: 213px;
+                height: 145px;
+            }
+
+            .text-show {
+                margin-top: 20px;
+                width: 100%;
+
+                #name-denoise {
+                    font-weight: 533;
+                    font-size: 40px;
+                    color: rgb(63, 62, 62);
+                }
+
+                #name-100 {
+                    color: rgb(63, 62, 62);
+                    font-size: 20px;
+
+                }
+
+                #name-100 span {
+                    padding: 3px 7px 4px 7px;
+                    border-top-right-radius: 14px;
+                    border-bottom-left-radius: 14px;
+                    background-color: orange;
+                    color: #FFF;
+                }
+            }
+        }
+
+        .home-main-left {
+            flex: 1;
+            display: flex;
+
+            flex-direction: column;
+            align-items: center;
+
+            .upload {
+                margin-top: 33px;
+                box-shadow: 0px 4px 7px 7px #dfd9d9;
+                width: 90%;
+                height: 213px;
+                border-radius: 20px;
+                display: flex;
+
+                justify-content: center;
+                align-items: center;
+            }
+
+            .btn-upload {
+                padding: 7px 27px 10px 27px;
+                background-color: rgb(78, 78, 172);
+                font-size: 20px;
+                font-weight: bold;
+                color: #FFF;
+                border-radius: 27px;
+                text-decoration: none;
+            }
+
+            .home-left-bot {
+                width: 90%;
+                margin-top: 20px;
+                display: flex;
+
+            }
+
+            .left-bot-p {}
+
+            .left-bot-p p {
+                font-size: 14px;
+                font-weight: bold;
+            }
+
+            .left-bot-p+.left-bot-img {
+                margin-left: 14px;
+            }
+
+            .left-bot-img {
+                width: 42px;
+                height: 42px;
+                margin-left: 7px;
+                border-radius: 7px;
+            }
+
+            .text-bot {
+                width: 90%;
+                margin-top: 7px;
+            }
+        }
+    }
+
+    .home-bot-stunning-quality {
+        width: 75%;
+        text-align: center;
+        margin-top: 100px;
+
+        .text-stunning {
+            font-size: 33px;
+            font-weight: bold;
+
+        }
+
+        .task-stunning {
+            margin-top: 14px;
+        }
+
+        .task-stunning a {
+            text-decoration: none;
+            padding: 7px 20px 7px 20px;
+            color: rgb(63, 62, 62);
+            margin: 0px 10px 0px 10px;
+
+            border-radius: 20px;
+        }
+
+        .img-stunning {
+            width: 100%;
+            border-radius: 7px;
+            margin-top: 20px;
+        }
+
+    }
+
+    .home-bottom {
+        width: 100%;
+        background-image: url("https://png.pngtree.com/background/20210709/original/pngtree-yellow-gradient-geometric-background-picture-image_909991.jpg");
+
+        border-radius: 7px;
+        margin-top: 70px;
+
+        .home-admin {
+            display: flex;
+            justify-content: space-around;
+
+        }
+
+        .home-bottom-text {
+            text-align: center;
+            font-size: 33px;
+            font-weight: bold;
+            margin-top: 33px;
+            margin-bottom: 14px;
+        }
+
+        .admin {
+            width: 247px;
+            height: 330px;
+            background-color: #fff;
+            border: 2px solid gray;
+            border-radius: 14px;
+
+            .admin-text {
+                font-size: 14px;
+                font-weight: bold;
+                margin-top: 20px;
+                margin-left: 18px;
+
+
+            }
+
+            .admin-img {
+                margin-left: 18px;
+                border-radius: 500px;
+                height: 33px;
+                margin-top: 67px;
+            }
+
+            .admin-name {
+                font-size: 10px;
+                font-weight: bold;
+                margin-top: 3px;
+                margin-left: 18px;
+            }
+
+            .admin-role {
+                font-size: 10px;
+                font-weight: bold;
+                margin-top: 3px;
+                margin-left: 18px;
+            }
+
+            .min-admin {
+                min-height: 100px;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .home-main {
+        width: 75%;
+        display: flex;
+        margin-top: 17px;
+
+        .home-main-right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .main-img {
+                width: 110px;
+                height: 75px;
+            }
+
+            .text-show {
+                margin-top: 12px;
+                width: 100%;
+
+                #name-denoise {
+                    font-weight: 533;
+                    font-size: 20px;
+                    color: rgb(63, 62, 62);
+                }
+
+                #name-100 {
+                    color: rgb(63, 62, 62);
+                    font-size: 10px;
+
+                }
+
+                #name-100 span {
+                    padding: 2px 4px 2px 4px;
+                    border-top-right-radius: 8px;
+                    border-bottom-left-radius: 8px;
+                    background-color: orange;
+                    color: #FFF;
+                }
+            }
+        }
+
+        .home-main-left {
+            flex: 1;
+            display: flex;
+
+            flex-direction: column;
+            align-items: center;
+
+            .upload {
+                margin-top: 17px;
+                box-shadow: 0px 2px 4px 4px #dfd9d9;
+                width: 90%;
+                height: 110px;
+                border-radius: 10px;
+                display: flex;
+
+                justify-content: center;
+                align-items: center;
+            }
+
+            .btn-upload {
+                padding: 4px 15px 6px 15px;
+                background-color: rgb(78, 78, 172);
+                font-size: 10px;
+                font-weight: bold;
+                color: #FFF;
+                border-radius: 15px;
+                text-decoration: none;
+            }
+
+            .home-left-bot {
+                width: 90%;
+                margin-top: 10px;
+                display: flex;
+
+            }
+
+            .left-bot-p {}
+
+            .left-bot-p p {
+                font-size: 7px;
+                font-weight: bold;
+            }
+
+            .left-bot-p+.left-bot-img {
+                margin-left: 7px;
+            }
+
+            .left-bot-img {
+                width: 24px;
+                height: 24px;
+                margin-left: 5px;
+                border-radius: 5px;
+            }
+
+            .text-bot {
+                width: 90%;
+                margin-top: 5px;
+            }
+        }
+    }
+
+    .home-bot-stunning-quality {
+        width: 75%;
+        text-align: center;
+        margin-top: 60px;
+
+        .text-stunning {
+            font-size: 18px;
+            font-weight: bold;
+
+        }
+
+        .task-stunning {
+            margin-top: 8px;
+        }
+
+        .task-stunning a {
+            text-decoration: none;
+            padding: 5px 12px 5px 12px;
+            color: rgb(63, 62, 62);
+            margin: 0px 7px 0px 7px;
+
+            border-radius: 12px;
+        }
+
+        .img-stunning {
+            width: 100%;
+            border-radius: 5px;
+            margin-top: 12px;
+        }
+
+    }
+
+    .home-bottom {
+        width: 100%;
+        background-image: url("https://png.pngtree.com/background/20210709/original/pngtree-yellow-gradient-geometric-background-picture-image_909991.jpg");
+
+        border-radius: 5px;
+        margin-top: 40px;
+
+        .home-admin {
+            display: flex;
+            justify-content: space-around;
+
+        }
+
+        .home-bottom-text {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 18px;
+            margin-bottom: 8px;
+        }
+
+        .admin {
+            width: 140px;
+            height: 180px;
+            background-color: #fff;
+            border: 2px solid gray;
+            border-radius: 8px;
+
+            .admin-text {
+                font-size: 8px;
+                font-weight: bold;
+                margin-top: 12px;
+                margin-left: 10px;
+
+
+            }
+
+            .admin-img {
+                margin-left: 10px;
+                border-radius: 500px;
+                height: 20px;
+                margin-top: 35px;
+            }
+
+            .admin-name {
+                font-size: 6px;
+                font-weight: bold;
+                margin-top: 2px;
+                margin-left: 10px;
+            }
+
+            .admin-role {
+                font-size: 7px;
+                font-weight: bold;
+                margin-top: 3px;
+                margin-left: 10px;
+            }
+
+            .min-admin {
+                min-height: 65px;
+            }
+        }
+    }
+}

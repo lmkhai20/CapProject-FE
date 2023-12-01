@@ -1,0 +1,92 @@
+.header {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+body {
+    border-radius: 20px;
+    text-decoration: none;
+    color: rgb(63, 62, 62);
+    font-family: Canva Sans,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";
+}
+
+.header-task:hover {
+    color: #29e81b !important;
+    transition: all 0.2s;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px gray solid;
+    padding-bottom: 3px;
+    background-color: #0052cc;
+    // position: fixed;
+}
+
+.right-header {
+    display: flex;
+    align-items: center;
+
+    .header-a {
+        text-decoration: none;
+    }
+
+    .right-header-img {
+        width: 200px;
+        height: 50px;
+    }
+
+    .header-cap {
+        font-size: 28px;
+        color: rgb(255, 255, 255);
+    }
+
+    .header-task {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        margin-left: 40px;
+        font-size: 20px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .header {}
+
+    .right-header {
+        .right-header-img {
+            width: 130px;
+            height: 35px;
+        }
+
+        .header-task {
+
+            margin-left: 27px;
+            font-size: 14px;
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 480px) {
+    .header {}
+
+    .right-header {
+        .right-header-img {
+            width: 80px;
+            height: 23px;
+        }
+
+        .header-task {
+            margin-left: 18px;
+            font-size: 11px;
+        }
+    }
+
+}
