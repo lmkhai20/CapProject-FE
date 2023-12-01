@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import * as XLSX from "xlsx";
 import LoadingSpinner from "../Loading";
 import "./app.scss"; // Import your SCSS file
 
@@ -9,6 +10,8 @@ const Reader = () => {
   const [responseImage, setResponseImage] = useState("");
   const [result, setResult] = useState({});
   const [uploading, setUploading] = useState(false);
+  const [exportButtonVisible, setExportButtonVisible] = useState(false);
+  const [errorOccurred, setErrorOccurred] = useState(false);
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
@@ -17,6 +20,8 @@ const Reader = () => {
 
   const handleSubmit = async () => {
     setUploading(true);
+    setExportButtonVisible(true);
+    setErrorOccurred(false);
     setErrorMessage("");
     if (selectedFile) {
       const formData = new FormData();
@@ -38,6 +43,7 @@ const Reader = () => {
         setResult(apiResult);
         setResponseImage(apiImage);
       } catch (error) {
+        setErrorOccurred(true);
         if (error.response && error.response.status === 400) {
           setResponseImage("");
           setResult({});
@@ -52,6 +58,31 @@ const Reader = () => {
         setUploading(false); // Tắt LoadingSpinner dù có lỗi hay không
       }
     }
+  };
+
+  const exportToExcel = () => {
+    const data = Object.entries(result).map(([key, value]) => [key, value]); // Chuyển object thành mảng các cặp key-value
+
+    const ws = XLSX.utils.aoa_to_sheet(data);
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, "result");
+
+    const wbout = XLSX.write(wb, { type: "array", bookType: "xlsx" }); // Thay đổi từ 'blob' sang 'array'
+
+    const blob = new Blob([wbout], { type: "application/octet-stream" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+
+    link.href = url;
+    link.setAttribute("download", "result.xlsx");
+    document.body.appendChild(link);
+
+    link.click();
+
+    setTimeout(() => {
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+    }, 200);
   };
 
   return (
@@ -104,6 +135,9 @@ const Reader = () => {
                 ))}
               </tbody>
             </table>
+            {!errorOccurred && exportButtonVisible && (
+              <button className="btnDownload" onClick={exportToExcel}>Export to Excel</button>
+            )}
           </div>
         </div>
       )}
