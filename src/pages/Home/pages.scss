@@ -11,6 +11,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 80px;
+    background: #fff;
     // background-color: #d5d9e1;
 }
 
@@ -69,51 +70,37 @@ p {
         align-items: center;
 
         .upload {
-            margin-top: 90px;
-            box-shadow: 0px 5px 10px 10px #dfd9d9;
-            width: 90%;
-            height: 320px;
-            border-radius: 30px;
-            display: flex;
+            margin-top: 10px;
+            // box-shadow: 0px 5px 10px 10px #dfd9d9;
+            // width: 70%;
+            // height: 240px;
+            // border-radius: 30px;
+            // display: flex;
 
-            justify-content: center;
-            align-items: center;
+            // justify-content: center;
+            // align-items: center;
+        }
+
+        .read-img {
+            // margin: 0 auto;
+            margin-top: 20px;
+            // width: 80%;
+            height: 280px;
+
         }
 
         .btn-upload {
-            padding: 11px 40px 15px 40px;
-            background-color: rgb(78, 78, 172);
-            font-size: 30px;
-            font-weight: bold;
+            padding: 5px 60px 5px 60px;
+            background-color: #0052cc;
+            font-size: 20px;
             color: #FFF;
-            border-radius: 40px;
-            text-decoration: none;
-        }
-
-        .home-left-bot {
-            width: 90%;
-            margin-top: 30px;
-            display: flex;
-        }
-
-        .left-bot-p {}
-
-        .left-bot-p p {
-            font-size: 17px;
-            font-weight: bold;
-        }
-
-        .left-bot-p+.left-bot-img {
-            margin-left: 20px;
-        }
-
-        .left-bot-img {
-            width: 62px;
-            height: 62px;
-            margin-left: 13px;
             border-radius: 10px;
-        }
+            text-decoration: none;
 
+            &:hover {
+                background-color: rgb(64, 21, 206)
+            }
+        }
 
     }
 }
