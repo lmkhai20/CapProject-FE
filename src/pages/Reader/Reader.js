@@ -118,7 +118,7 @@ const Reader = () => {
                 {Object.entries(result).map(([key, value]) => (
                   <tr key={key} className="result-item">
                     <td>
-                      <strong>{key}:</strong>
+                      <strong>{key}</strong>
                     </td>
                     <td>
                       {Array.isArray(value) ? (
