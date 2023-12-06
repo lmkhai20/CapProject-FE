@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import * as XLSX from "xlsx";
 import LoadingSpinner from "../Loading";
+import iconUpload from "../../assets/images/camera.149f7439.svg"
 import "./app.scss"; // Import your SCSS file
 
 const Reader = () => {
@@ -12,10 +13,12 @@ const Reader = () => {
   const [uploading, setUploading] = useState(false);
   const [exportButtonVisible, setExportButtonVisible] = useState(false);
   const [errorOccurred, setErrorOccurred] = useState(false);
+  const [fileName, setFileName] = useState("");
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     setSelectedFile(file);
+    setFileName(file.name);
   };
 
   const handleSubmit = async () => {
@@ -23,6 +26,13 @@ const Reader = () => {
     setExportButtonVisible(true);
     setErrorOccurred(false);
     setErrorMessage("");
+
+    if (!selectedFile) {
+      setErrorMessage("Please select an image.");
+      // setUploading(false);
+      return;
+    }
+
     if (selectedFile) {
       const formData = new FormData();
       formData.append("image", selectedFile);
@@ -88,19 +98,27 @@ const Reader = () => {
   return (
     <div className="upload-container">
       <div className="upload-form">
-        <input
-          type="file"
-          onChange={handleFileChange}
-          className="file-input"
-          title=" "
-        />
+        <img src={iconUpload} alt="icon_upload_image" className="upload-icon"/>
+
+        <label className="custom-file-upload">
+          <input
+            type="file"
+            onChange={handleFileChange}
+            className="file-input"
+            title=" "
+            style={{ display: 'none' }}
+          />
+          {/* <span>Choose file</span> */}
+          <span>{fileName || 'Choose file'}</span>
+        </label>
+
         <button onClick={handleSubmit} className="upload-button">
           Reader
         </button>
       </div>
 
       {errorMessage && <p className="error-message">{errorMessage}</p>}
-      {uploading && <LoadingSpinner />}
+      {uploading && !errorMessage && <LoadingSpinner />}
 
       {!uploading && (
         <div className="image-and-result-container">
