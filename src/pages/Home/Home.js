@@ -1,6 +1,7 @@
 // import react from 'react'
 import imgg from "../../assets/images/aaa.webp";
 import imgg2 from "../../assets/images/readcccd.png";
+
 import "./pages.scss";
 
 const Home = () => {

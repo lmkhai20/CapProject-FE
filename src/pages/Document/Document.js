@@ -2,8 +2,8 @@
 import './document.scss'
 import imgCccd1 from '../../assets/images/cccdok.png'
 import imgCccd2 from '../../assets/images/cccdok2.png'
-import imgErr1 from '../../assets/images/error1.jpg'
-import imgErr2 from '../../assets/images/error2.jpg'
+import imgErr1 from '../../assets/images/anhmo2.jpg'
+import imgErr2 from '../../assets/images/anhmo.jpg'
 
 const Document = () => {
     return (
@@ -37,6 +37,29 @@ const Document = () => {
                     </ul>
                     <p><img alt='cccd' src={imgErr2} /></p>
                 </div>
+                <div className='post-res'>
+                <h2><a href='#response' id='response' >Response</a></h2>
+                <p>
+                Hệ thống có khả năng trích xuất thông tin trên CCCD của Việt Nam.
+                Sau khi gửi request thành công, hệ thống sẽ trả về một file json bao gồm thông tin dạng text trên CCCD và hiển thị ra màn hình. Các thông tin bao gồm:
+                </p>
+                <ul>
+                    <li>ID : Số CCCD</li>
+                    <li>Name : Tên</li>
+                    <li>Date of birth : Ngày sinh</li>
+                    <li>Sex : Giới tính</li>
+                    <li>National : Quốc tịch</li>
+                    <li>Home : Quê quán</li>
+                    <li>Address : Nơi thường trú</li>
+                </ul>
+                <h2>Error</h2>
+                <p>
+                    Nếu hệ thống không hiển thị kết quả hoặc hiển thị lỗi trên màn hình, bạn hãy kiểm tra lại hình ảnh của mình đã phù hợp hay chưa.
+                    Có thể CCCD trong hình ảnh bị thiếu góc nên không thể crop về dạng chuẩn.
+                    Bạn hãy đọc lại các quy định <a href='#quydinh'>ở đây</a>.
+                </p>
+                </div>
+                <div className="bbottom"></div>
 
             </div>
            
@@ -45,6 +68,7 @@ const Document = () => {
                     <li><a href='#quydinh'>Quy định</a></li>
                     <li><a href='#anhtieuchuan'>Ảnh tiêu chuẩn</a></li>
                     <li><a href='#anhkemchatluong'>Ảnh kém chất lượng</a></li>
+                    <li><a href='#response'>Response</a></li>
                 </ul>
             </div>
             
