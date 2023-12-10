@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import * as XLSX from "xlsx";
 import LoadingSpinner from "../Loading";
-import iconUpload from "../../assets/images/camera.149f7439.svg"
+import iconUpload from "../../assets/images/camera.149f7439.svg";
 import "./app.scss"; // Import your SCSS file
 
 const Reader = () => {
@@ -39,7 +39,8 @@ const Reader = () => {
 
       try {
         const response = await axios.post(
-          "http://localhost:8000/upload-image/",
+          // "http://localhost:8000/upload-image/",
+          "https://django.cnttlmkk19.id.vn/upload-image/",
           formData,
           {
             headers: {
@@ -98,7 +99,7 @@ const Reader = () => {
   return (
     <div className="upload-container">
       <div className="upload-form">
-        <img src={iconUpload} alt="icon_upload_image" className="upload-icon"/>
+        <img src={iconUpload} alt="icon_upload_image" className="upload-icon" />
 
         <label className="custom-file-upload">
           <input
@@ -106,10 +107,10 @@ const Reader = () => {
             onChange={handleFileChange}
             className="file-input"
             title=" "
-            style={{ display: 'none' }}
+            style={{ display: "none" }}
           />
           {/* <span>Choose file</span> */}
-          <span>{fileName || 'Choose file'}</span>
+          <span>{fileName || "Choose file"}</span>
         </label>
 
         <button onClick={handleSubmit} className="upload-button">
@@ -154,7 +155,9 @@ const Reader = () => {
               </tbody>
             </table>
             {!errorOccurred && exportButtonVisible && (
-              <button className="btnDownload" onClick={exportToExcel}>Export to Excel</button>
+              <button className="btnDownload" onClick={exportToExcel}>
+                Export to Excel
+              </button>
             )}
           </div>
         </div>
